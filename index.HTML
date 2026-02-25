@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>FREEZONE FINANCE | QUANTUM</title>
+    
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="FREEZONE">
+    <meta name="theme-color" content="#050505">
+
+    <link rel="manifest" href="data:application/manifest+json,{'name':'Freezone Finance','short_name':'Freezone','start_url':'.','display':'standalone','background_color':'#050505','theme_color':'#050505','icons':[{'src':'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAYAAACZ39Y6AAAACXBIWXMAAAsTAAALEwEAmpwYAAADJ0lEQVR4nO3bS2hTQRiH8X8S09Ym2iS2L6KiteKjL6qIgguRVvBRvCBeuBAUvCBeuBEXLgQvKIKiC6uIgguRVvBRfKBoW9vWJm0S09YmS8WFmE0u6XAnM/9vBn6L78yc75fDTE7SNE0TQK6Y7A6A/zcBCBKAIAGIAgEgSACCAAAIAgAgCACCIBAIAsEf7Hcl6OfX8Yv783P7e3X8+nFvbt8u7D7S+nNo9N948H699fvg8P/26O368O/j7Yv783P7+9DoxPz2S6L/Xq7u/nK8vXFvfT66uT4/p38ff56en9vfh0Yn5pdfEP0/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOe7AAnv6e8r7P/AAAAAElFTkSuQmCC','sizes':'192x192','type':'image/png'}]}">
+
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAYAAACZ39Y6AAAACXBIWXMAAAsTAAALEwEAmpwYAAADJ0lEQVR4nO3bS2hTQRiH8X8S09Ym2iS2L6KiteKjL6qIgguRVvBRvCBeuBAUvCBeuBEXLgQvKIKiC6uIgguRVvBRfKBoW9vWJm0S09YmS8WFmE0u6XAnM/9vBn6L78yc75fDTE7SNE0TQK6Y7A6A/zcBCBKAIAGIAgEgSACCAAAIAgAgCACCIBAIAsEf7Hcl6OfX8Yv783P7e3X8+nFvbt8u7D7S+nNo9N948H699fvg8P/26O368O/j7Yv783P7+9DoxPz2S6L/Xq7u/nK8vXFvfT66uT4/p38ff56en9vfh0Yn5pdfEP0/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOe7AAnv6e8r7P/AAAAAElFTkSuQmCC">
+    <link rel="icon" sizes="192x192" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAYAAACZ39Y6AAAACXBIWXMAAAsTAAALEwEAmpwYAAADJ0lEQVR4nO3bS2hTQRiH8X8S09Ym2iS2L6KiteKjL6qIgguRVvBRvCBeuBAUvCBeuBEXLgQvKIKiC6uIgguRVvBRfKBoW9vWJm0S09YmS8WFmE0u6XAnM/9vBn6L78yc75fDTE7SNE0TQK6Y7A6A/zcBCBKAIAGIAgEgSACCAAAIAgAgCACCIBAIAsEf7Hcl6OfX8Yv783P7e3X8+nFvbt8u7D7S+nNo9N948H699fvg8P/26O368O/j7Yv783P7+9DoxPz2S6L/Xq7u/nK8vXFvfT66uT4/p38ff56en9vfh0Yn5pdfEP0/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOdAYI/2O9KMAnAFZOe7AAnv6e8r7P/AAAAAElFTkSuQmCC">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505; --glass: rgba(15, 15, 20, 0.8); --accent: #2d5bff;
+            --text: #ffffff; --dim: #64748b; --success: #00f298; 
+            --danger: #ff4b4b; --border: rgba(255, 255, 255, 0.1);
+        }
+
+        [data-theme="light"] {
+            --bg: #f5f7fa; --glass: rgba(255, 255, 255, 0.9); --accent: #2d5bff;
+            --text: #0a0c10; --dim: #64748b; --success: #10b981; 
+            --danger: #ef4444; --border: rgba(0, 0, 0, 0.08);
+        }
+
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; height: 100vh; overflow: hidden; }
+
+        .logo { font-weight: 800; font-size: 16px; letter-spacing: 8px; margin-bottom: 40px; color: var(--text); text-shadow: 0 0 20px var(--accent); }
+
+        .menu-btn { display: none; position: fixed; top: 22px; right: 20px; z-index: 1000; background: var(--glass); border: 1px solid var(--border); padding: 10px 14px; border-radius: 10px; cursor: pointer; color: var(--text); }
+
+        nav { 
+            width: 280px; border-right: 1px solid var(--border); padding: 40px; 
+            display: flex; flex-direction: column; background: var(--bg); 
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow-y: auto;
+        }
+
+        @media (max-width: 850px) {
+            .menu-btn { display: block; }
+            nav { position: fixed; height: 100%; z-index: 999; transform: translateX(-100%); width: 280px; padding: 30px 20px; }
+            nav.open { transform: translateX(0); box-shadow: 30px 0 60px rgba(0,0,0,0.8); }
+            body { flex-direction: column; overflow-y: auto; height: auto; }
+            main { padding: 90px 15px 40px !important; overflow-y: visible !important; }
+            .kpi-row, .sector-list { grid-template-columns: 1fr 1fr !important; }
+            .input-grid { grid-template-columns: 1fr !important; }
+            .logo { font-size: 12px; letter-spacing: 5px; margin-bottom: 30px; }
+            
+            input, select { height: 54px !important; padding: 0 16px !important; font-size: 16px !important; line-height: 54px !important; }
+            .nav-footer { margin-top: 40px; padding-bottom: 40px; }
+        }
+
+        input, select {
+            background: rgba(128,128,128,0.08); border: 1px solid var(--border);
+            border-radius: 14px; color: var(--text); width: 100%; margin-bottom: 12px; 
+            outline: none; transition: 0.3s; box-sizing: border-box; display: block;
+            font-family: inherit; height: 60px; padding: 0 20px; line-height: 60px; 
+        }
+
+        input::placeholder { color: var(--dim); opacity: 0.6; line-height: normal; }
+        input:focus { border-color: var(--accent); background: rgba(45, 91, 255, 0.1); }
+
+        main { flex: 1; padding: 40px; overflow-y: auto; display: flex; flex-direction: column; gap: 20px; }
+        .quantum-card { background: var(--glass); border: 1px solid var(--border); border-radius: 20px; padding: 22px; backdrop-filter: blur(25px); }
+        .label { font-size: 9px; font-weight: 800; color: var(--dim); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; display: block; }
+        .value { font-size: 26px; font-weight: 200; letter-spacing: -1px; }
+        .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+        .sector-list { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+        .sector-tag { background: rgba(128,128,128,0.03); padding: 14px; border-radius: 14px; border: 1px solid var(--border); text-align: center; }
+
+        .btn { padding: 18px; border-radius: 14px; border: none; font-weight: 800; text-transform: uppercase; cursor: pointer; width: 100%; letter-spacing: 1.5px; }
+        .btn-accent { background: var(--accent); color: white; }
+        .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+
+        .theme-toggle { display: flex; background: var(--border); border-radius: 12px; padding: 4px; gap: 4px; margin: 20px 0; cursor: pointer; }
+        .mode-chip { flex: 1; text-align: center; font-size: 9px; font-weight: 800; padding: 10px; border-radius: 8px; text-transform: uppercase; }
+        .active-chip { background: var(--text); color: var(--bg); }
+
+        .ledger-row { display: grid; grid-template-columns: 80px 1fr 100px 30px; align-items: center; padding: 15px 5px; border-bottom: 1px solid var(--border); font-size: 13px; }
+        .type-tag { font-size: 8px; font-weight: 900; padding: 3px 6px; border-radius: 4px; width: fit-content; }
+        .type-in { background: rgba(0, 242, 152, 0.1); color: var(--success); }
+        .type-out { background: rgba(255, 75, 75, 0.1); color: var(--danger); }
+        .del-x { background: none; border: none; color: var(--dim); cursor: pointer; font-size: 18px; }
+    </style>
+</head>
+<body>
+
+<button class="menu-btn" onclick="toggleNav()">☰</button>
+
+<nav id="sideNav">
+    <div class="logo">FREEZONE FINANCE</div>
+    <div class="label">Interface Mode</div>
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <div id="dark-chip" class="mode-chip active-chip">Dark</div>
+        <div id="light-chip" class="mode-chip">Light</div>
+    </div>
+    
+    <div style="flex: 1;"></div>
+    
+    <div class="nav-footer">
+        <div class="label">Control</div>
+        <button class="btn btn-outline" style="color: var(--danger); border-color: var(--danger); font-size: 9px; padding: 10px;" onclick="purge()">Purge Cache</button>
+    </div>
+</nav>
+
+<main onclick="closeNav()">
+    <div class="quantum-card" style="border-left: 4px solid var(--accent); display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <div class="label" style="color: var(--accent)">Intelligence</div>
+            <div id="ai-text" style="font-size: 15px;">Quantum System Ready.</div>
+        </div>
+        <div style="text-align: right;">
+            <div class="label">Today</div>
+            <div id="v-today" style="font-size: 18px; font-weight: 800; color: var(--danger);">₦0</div>
+        </div>
+    </div>
+
+    <div class="kpi-row">
+        <div class="quantum-card"><span class="label">Capital</span><span class="value" id="v-assets">₦0</span></div>
+        <div class="quantum-card"><span class="label">Liquidity</span><span class="value" id="v-liq">₦0</span></div>
+        <div class="quantum-card"><span class="label">Vault</span><span class="value" id="v-vault">₦0</span></div>
+        <div class="quantum-card"><span class="label">Burn</span><span class="value" id="v-run">₦0</span></div>
+    </div>
+
+    <div class="sector-list" id="sector-grid"></div>
+
+    <div class="input-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="quantum-card">
+            <span class="label" style="color:var(--success)">+ Add Inflow</span>
+            <input type="text" id="in-d" placeholder="Source (e.g. Salary)">
+            <input type="number" id="in-a" placeholder="Amount (₦)">
+            <button class="btn btn-outline" onclick="addIn()">Register</button>
+        </div>
+        <div class="quantum-card">
+            <span class="label" style="color:var(--danger)">- Log Expense</span>
+            <input type="text" id="out-d" placeholder="Reason (e.g. Lunch)">
+            <input type="number" id="out-a" placeholder="Amount (₦)">
+            <select id="out-c">
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Bills">Bills</option>
+                <option value="Savings">Vault</option>
+                <option value="Other">Other</option>
+            </select>
+            <button class="btn btn-accent" onclick="addOut()">Execute</button>
+        </div>
+    </div>
+
+    <div class="quantum-card">
+        <span class="label">Master Audit Ledger</span>
+        <div id="ledger-body"></div>
+    </div>
+</main>
+
+<script>
+    let db = JSON.parse(localStorage.getItem('fz_v31')) || { history: [], sectors: ["Savings", "Bills", "Transport", "Food", "Other"] };
+    let currentTheme = localStorage.getItem('fz_theme') || 'dark';
+
+    function toggleNav() { document.getElementById('sideNav').classList.toggle('open'); }
+    function closeNav() { document.getElementById('sideNav').classList.remove('open'); }
+
+    function applyTheme() {
+        document.body.setAttribute('data-theme', currentTheme);
+        document.getElementById('dark-chip').className = currentTheme === 'dark' ? 'mode-chip active-chip' : 'mode-chip';
+        document.getElementById('light-chip').className = currentTheme === 'light' ? 'mode-chip active-chip' : 'mode-chip';
+        localStorage.setItem('fz_theme', currentTheme);
+    }
+    function toggleTheme() { currentTheme = currentTheme === 'dark' ? 'light' : 'dark'; applyTheme(); }
+
+    function save() { localStorage.setItem('fz_v31', JSON.stringify(db)); render(); }
+
+    function addIn() {
+        const a = parseFloat(document.getElementById('in-a').value); if(!a) return;
+        db.history.unshift({ id: Date.now(), desc: document.getElementById('in-d').value || "Credit", cat: "INFLOW", amt: a, date: new Date().toLocaleDateString() });
+        save(); document.getElementById('in-a').value = ''; document.getElementById('in-d').value = '';
+    }
+
+    function addOut() {
+        const a = parseFloat(document.getElementById('out-a').value); if(!a) return;
+        db.history.unshift({ id: Date.now(), desc: document.getElementById('out-d').value || "Debit", cat: document.getElementById('out-c').value, amt: -a, date: new Date().toLocaleDateString() });
+        save(); document.getElementById('out-a').value = ''; document.getElementById('out-d').value = '';
+    }
+
+    function removeEntry(id) { db.history = db.history.filter(i => i.id !== id); save(); }
+
+    function render() {
+        let assets = 0, spent = 0, todaySpent = 0;
+        const sums = {}; db.sectors.forEach(s => sums[s] = 0);
+        const todayStr = new Date().toLocaleDateString();
+
+        db.history.forEach(i => {
+            if(i.amt > 0) assets += i.amt;
+            else {
+                let v = Math.abs(i.amt); spent += v; sums[i.cat] += v;
+                if(i.date === todayStr) todaySpent += v;
+            }
+        });
+
+        const liq = assets - spent;
+        document.getElementById('v-assets').innerText = `₦${assets.toLocaleString()}`;
+        document.getElementById('v-liq').innerText = `₦${liq.toLocaleString()}`;
+        document.getElementById('v-vault').innerText = `₦${sums['Savings'].toLocaleString()}`;
+        document.getElementById('v-run').innerText = `₦${Math.floor(liq/30).toLocaleString()}`;
+        document.getElementById('v-today').innerText = `₦${todaySpent.toLocaleString()}`;
+
+        document.getElementById('sector-grid').innerHTML = db.sectors.map(s => `
+            <div class="sector-tag">
+                <div class="label" style="font-size:7px">${s}</div>
+                <div style="font-size:14px; font-weight:600">₦${sums[s].toLocaleString()}</div>
+            </div>`).join('');
+
+        document.getElementById('ledger-body').innerHTML = db.history.map(i => `
+            <div class="ledger-row">
+                <div class="type-tag ${i.amt > 0 ? 'type-in' : 'type-out'}">${i.amt > 0 ? 'IN' : 'OUT'}</div>
+                <div style="font-weight:600">${i.desc}</div>
+                <div style="text-align:right; font-weight:800; color:${i.amt > 0 ? 'var(--success)' : 'var(--text)'}">₦${Math.abs(i.amt).toLocaleString()}</div>
+                <button class="del-x" onclick="removeEntry(${i.id})">×</button>
+            </div>`).join('');
+    }
+
+    function purge() { if(confirm("Purge data?")) { localStorage.clear(); location.reload(); } }
+
+    applyTheme(); render();
+</script>
+</body>
+</html>
